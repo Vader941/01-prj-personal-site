@@ -2,10 +2,127 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>My Personal Site</title>
+  <title>My Personal Portfolio</title>
+  <!-- Link to your CSS file -->
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!-- Add your HTML content here -->
+  <!-- Header section with your name -->
+  <header>
+    <h1>Nathan - A Full Stack Developer</h1>
+  </header>
+
+  <!-- Navigation links to each section -->
+  <nav>
+    <a href="#bio">Bio</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Current Projects</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <!-- Example main content layout -->
+  <div class="main-grid">
+    <!-- Bio Section with image -->
+    <section id="bio">
+      <div class="bio-container">
+        <!-- Replace 'your-photo.jpg' with your actual image file -->
+        <img src="img/profile.png" alt="Your Name" class="bio-photo">
+        <div class="bio-text">
+          <h2>About Me</h2>
+          <p>
+            I'm a developer driven by curiosity, creativity, and a desire to build technology that matters. After stepping into the world of programming through projects like a text-based recreation of The Oregon Trail, I quickly discovered how much I enjoy combining logic, storytelling, and user experience. My current focus is on web development, using HTML, CSS, and JavaScript, while actively integrating AI tools like ChatGPT and GitHub Copilot to improve efficiency, accessibility, and design quality.
+          </p>
+          <p>
+            One of my long-term goals is to create serious games—interactive tools that don’t just entertain but support children with autism in learning and engagement. I believe technology should be inclusive, purposeful, and accessible to everyone, and I'm actively working toward that by refining my skills and learning how to embed empathy and usability into every project.
+          </p>
+          <p>
+            Whether I’m planning a family trip, restoring functionality to a mechanical system, or writing a custom Python script, I take a problem-solving approach that’s grounded, user-focused, and always looking for that spark of innovation.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills">
+      <h2>Skills</h2>
+      <!-- List of your skills -->
+      <ul class="skills">
+        <!-- HTML & CSS skill as an image -->
+        <li>
+          <img src="img/HTML-CSS.png" alt="HTML & CSS Logo" class="skill-icon">
+        </li>
+        <!-- Python skill as an image -->
+        <li>
+          <img src="img/python.png" alt="Python Logo" class="skill-icon">
+        </li>
+        <!-- JS/Node.js skill as an image -->
+        <li>
+          <img src="img/JSNode.png" alt="JavaScript and Node.js Logo" class="skill-icon">
+        </li>
+        <!-- Java skill as an image -->
+        <li>
+          <img src="img/Java.png" alt="Java Logo" class="skill-icon">
+        </li>
+        <!-- Agile skill as an image -->
+        <li>
+          <img src="img/Agile.png" alt="Agile Logo" class="skill-icon">
+        </li>
+        <!-- Git skill as an image -->
+        <li>
+          <img src="img/git.png" alt="Git Logo" class="skill-icon">
+        </li>
+        <!-- AI Tools skill as an image -->
+        <li>
+          <img src="img/AI.png" alt="AI Tools Logo" class="skill-icon">
+        </li>
+      </ul>
+    </section>
+
+    <!-- Current Projects Section -->
+    <section id="projects">
+      <h2>Current Projects</h2>
+      <!-- Projects container using flexbox for side-by-side layout -->
+      <div class="projects-flex">
+        <!-- Project 1: Website with thumbnail -->
+        <div class="project-card">
+          <!-- The image is now a link to your website project -->
+          <a href="https://vader941.github.io/01-pet-fostering-cta/" target="_blank">
+            <img src="img/TN-Web.jpg" alt="Website Thumbnail" class="project-thumb">
+          </a>
+          <div>
+            <strong>Website Design</strong>
+            <p>Building and designing websites utilizing a combination of my knowledge and Modern AI tools like ChatGPT and GitHub Copilot.</p>
+          </div>
+        </div>
+        <!-- Project 2: Oregon Trail game with thumbnail -->
+        <div class="project-card">
+          <!-- Thumbnail for Oregon Trail project -->
+          <img src="img/Oregon.png" alt="Oregon Trail Game Thumbnail" class="project-thumb">
+          <div>
+            <strong>Oregon Trail Game (Python)</strong>
+            <p>Creating a text-based replica of The Oregon Trail game using Python.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- Contact Section (now outside .main-grid, so it appears below) -->
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>
+      <strong>Email:</strong>
+      <a href="mailto:nable941@gmail.com">nable941@gmail.com</a>
+    </p>
+    <p>
+      <strong>LinkedIn:</strong>
+      <a href="https://www.linkedin.com/in/nathan-able/" target="_blank">linkedin.com/in/nathan-able</a>
+    </p>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    &copy; Nathan Able, May 2025
+  </footer>
 </body>
 </html>

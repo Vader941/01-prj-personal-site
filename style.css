@@ -1,1 +1,276 @@
-/* Add you CSS here */
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #e0e6ed; /* Light text for dark background */
+  /* Gradient background with black, blue-green, purple, and a hint of red */
+  background: linear-gradient(135deg, #18181b 0%, #232946 40%, #3a185c 75%, #2a0a16 100%);
+  min-height: 100vh;
+}
+
+/* Make all links use blue-green by default and red when visited */
+a {
+  color: #00ffe7; /* Blue-green for unvisited links */
+  text-decoration: underline; /* Underline for clarity */
+}
+
+/* Change link color to red when visited */
+a:visited {
+  color: #e94560; /* Red for visited links */
+}
+
+/* Header */
+header {
+  background: #18181b; /* Almost black */
+  color: #00ffe7; /* Neon blue-green accent */
+  padding: 2.5rem 0 2rem 0;
+  text-align: center;
+  letter-spacing: 2px;
+  border-bottom-left-radius: 32px;
+  border-bottom-right-radius: 32px;
+  box-shadow: 0 6px 24px rgba(0, 255, 231, 0.10);
+  text-shadow: 0 0 8px #00ffe7, 0 0 2px #e94560, 0 0 12px #a259f7;
+  /* Add a background image to the header */
+  background-image: url('img/bg.png');
+  background-size: cover;      /* Make the image cover the header area */
+  background-position: center; /* Center the image */
+}
+
+header h1 {
+  font-size: 2.5rem; /* Increase header font size */
+  margin: 0.5rem 0;
+}
+
+/* Navigation */
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  background: #232946; /* Deep blue-grey */
+  padding: 1rem 0;
+  border-radius: 0 0 18px 18px;
+  box-shadow: 0 2px 12px rgba(162, 89, 247, 0.08);
+  margin-bottom: 2.5rem;
+  border-bottom: 1px solid #a259f7; /* Purple accent */
+}
+
+nav a {
+  color: #a259f7; /* Purple accent */
+  text-decoration: none;
+  font-weight: bold;
+  padding: 0.6rem 1.4rem;
+  border-radius: 10px;
+  transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+  text-shadow: 0 0 4px #a259f7;
+}
+
+nav a:hover {
+  background: #e94560; /* Red accent on hover */
+  color: #fff;
+  box-shadow: 0 2px 8px #e94560;
+}
+
+/* Main content uses flex for layout on large screens */
+.main-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  max-width: 1100px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+/* Each section is a card */
+section {
+  background: #232946; /* Deep blue-grey */
+  border-radius: 20px;
+  box-shadow: 0 6px 32px rgba(162,89,247,0.07);
+  padding: 2rem 1.5rem;
+  border: 1px solid #3a185c; /* Subtle purple border */
+  flex: 1 1 320px;
+  min-width: 300px;
+  margin-bottom: 2rem;
+}
+
+/* Section Headings */
+h2 {
+  color: #00ffe7; /* Blue-green accent */
+  border-bottom: 2px solid #e94560; /* Red underline */
+  padding-bottom: 0.5rem;
+  margin-bottom: 1.5rem;
+  font-size: 1.7rem;
+  letter-spacing: 1px;
+  text-shadow: 0 0 8px #a259f7, 0 0 2px #e94560;
+}
+
+/* Skills List */
+.skills {
+  list-style: none;
+  padding: 0;
+}
+
+.skills li {
+  display: inline-block;
+  margin: 0.5rem 0.5rem 0.5rem 0;
+  /* Remove background and color for a simpler look */
+  background: none;
+  color: inherit;
+  padding: 0;
+  border-radius: 0;
+  box-shadow: none;
+  border: none;
+  transition: none;
+}
+
+.skills li:hover {
+  background: none;
+  color: inherit;
+}
+
+/* Skill icon image style */
+.skill-icon {
+  width: 60px;
+  height: 60px;
+  vertical-align: middle;
+  border-radius: 8px;
+  background: #fff;
+  padding: 5px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.10);
+  border: none;
+}
+
+/* AI Tools icon should be wider */
+.skill-icon[src*="AI.png"] {
+  width: 200px;
+  height: auto;
+  display: inline-block;
+  vertical-align: middle;
+  border-radius: 8px;
+  background: #fff;
+  padding: 5px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.10);
+  border: none;
+}
+
+/* Project List */
+#projects ul {
+  padding-left: 1.2rem;
+}
+
+#projects li {
+  margin-bottom: 1rem;
+  background: #2a0a16; /* Deep red-black */
+  border-left: 4px solid #a259f7; /* Purple accent */
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  box-shadow: 0 1px 4px rgba(233,69,96,0.10);
+  color: #e0e6ed;
+}
+
+/* Projects section uses flex to show cards side by side */
+.projects-flex {
+  display: flex;              /* Place projects side by side */
+  gap: 2rem;                  /* Space between projects */
+  flex-wrap: wrap;            /* Wrap on small screens */
+  margin-top: 1rem;
+}
+
+.project-card {
+  background: #232946;        /* Match section background */
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(162,89,247,0.07);
+  padding: 1rem;
+  flex: 1 1 260px;            /* Responsive width */
+  min-width: 220px;
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.project-thumb {
+  width: 80px;                /* Thumbnail size */
+  height: 80px;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.10);
+  border: none;
+}
+
+/* Bio section layout */
+.bio-container {
+  display: flex; /* Place image and text side by side */
+  align-items: flex-start;
+  gap: 1.5rem;
+}
+
+.bio-photo {
+  width: 140px;        /* Adjust size as needed */
+  height: 140px;
+  object-fit: cover;   /* Crop image to fit */
+  border-radius: 50%;  /* Make image round */
+  border: 3px solid #a259f7; /* Purple border for accent */
+  box-shadow: 0 2px 12px rgba(162, 89, 247, 0.15);
+}
+
+.bio-text {
+  flex: 1; /* Take up remaining space */
+}
+
+/* Stack image above text on small screens */
+@media (max-width: 600px) {
+  .bio-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .bio-photo {
+    margin-bottom: 1rem;
+  }
+}
+
+/* Responsive: stack cards on small screens */
+@media (max-width: 900px) {
+  .main-grid {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  section {
+    padding: 1.2rem 0.7rem;
+    min-width: unset;
+  }
+}
+
+@media (max-width: 600px) {
+  nav {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    border-radius: 0 0 12px 12px;
+  }
+  .main-grid {
+    padding: 0 0.5rem;
+  }
+}
+
+@media (max-width: 700px) {
+  .projects-flex {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .project-card {
+    flex-direction: row;
+    min-width: unset;
+  }
+}
+
+/* Footer styles */
+footer {
+  text-align: center;
+  color: #aaa;
+  font-size: 1rem;
+  padding: 1.5rem 0 1rem 0;
+  margin-top: 2rem;
+  background: none;
+  border-top: 1px solid #39393b;
+}
