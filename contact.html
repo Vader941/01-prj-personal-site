@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Contact - Nathan Able</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Contact Nathan</h1>
+  </header>
+  <!-- Navigation with Home and Bio links -->
+  <nav>
+    <!-- Home button goes to the main page -->
+    <a href="index.html">Home</a>
+    <!-- Bio button goes to the bio page -->
+    <a href="bio.html">Bio</a>
+    <a href="skills.html">Skills & Current Projects</a>
+    <!-- Contact button is active on this page -->
+    <a href="contact.html" class="active">Contact</a>
+  </nav>
+  <main class="contact-main">
+    <section id="contact">
+      <h2>Contact</h2>
+      <!-- Contact Information -->
+      <div class="contact-info">
+        <div>
+          <strong>GitHub:</strong>
+          <a href="https://github.com/Vader941" target="_blank">github.com/Vader941</a>
+        </div>
+        <div>
+          <strong>LinkedIn:</strong>
+          <a href="https://www.linkedin.com/in/nathan-able/" target="_blank">linkedin.com/in/nathan-able</a>
+        </div>
+      </div>
+      <!-- Contact Form -->
+      <form id="contactForm" action="mailto:nable941@gmail.com" method="POST" enctype="text/plain" class="contact-form">
+        <!-- Name input -->
+        <label for="name">Your Name:</label><br>
+        <input type="text" id="name" name="name" required><br><br>
+
+        <!-- Email input -->
+        <label for="email">Your Email:</label><br>
+        <input type="email" id="email" name="email" required><br><br>
+
+        <!-- Subject dropdown -->
+        <label for="subject">Subject:</label><br>
+        <select id="subject" name="subject" required>
+          <option value="">-- Please choose an option --</option>
+          <option value="Employment_Opportunity">💼 Career - Employment Opportunity</option>
+          <option value="Internship_Entry-Level_Role">💼 Career - Internship / Entry-Level Role</option>
+          <option value="Career_Mentorship">💼 Career - Career Mentorship</option>
+          <option value="Feedback_on_a_Project">🧠 Projects & Tech - Feedback on a Project</option>
+          <option value="Collaboration_on_a_Dev_Project">🧠 Projects & Tech - Collaboration on a Dev Project</option>
+          <option value="Open_Source_Contribution">🧠 Projects & Tech - Open Source Contribution</option>
+          <option value="Found_a_Bug">🛠 Website - Found a Bug</option>
+          <option value="Accessibility_Feedback">🛠 Website - Accessibility Feedback</option>
+          <option value="Design_Suggestion">🛠 Website - Design Suggestion</option>
+        </select><br><br>
+
+        <!-- Message box -->
+        <label for="message">Message:</label><br>
+        <textarea id="message" name="message" rows="7" cols="40" required></textarea><br>
+        <!-- Character counter for the message -->
+        <span id="charCount">0 / 1000</span><br><br>
+
+        <!-- Submit button -->
+        <button type="submit" class="contact-btn">Send Email</button>
+      </form>
+      <!-- End Contact Form -->
+
+      <script>
+        // Get form elements
+        const form = document.getElementById('contactForm');
+        const nameInput = document.getElementById('name');
+        const emailInput = document.getElementById('email');
+        const subjectInput = document.getElementById('subject');
+        const messageInput = document.getElementById('message');
+        const charCount = document.getElementById('charCount');
+
+        // Update character counter as user types
+        messageInput.addEventListener('input', function() {
+          let len = messageInput.value.length;
+          charCount.textContent = len + " / 1000";
+          if (len > 1000) {
+            charCount.style.color = "red";
+          } else {
+            charCount.style.color = "";
+          }
+        });
+
+        // Simple form validation before submit
+        form.addEventListener('submit', function(event) {
+          let valid = true;
+          let errors = [];
+
+          // Check name is not empty
+          if (nameInput.value.trim() === "") {
+            valid = false;
+            errors.push("Please enter your name.");
+          }
+
+          // Check email format
+          const emailPattern = /^[^@\s]+@[^@\s]+\.[^@\s]+$/;
+          if (!emailPattern.test(emailInput.value.trim())) {
+            valid = false;
+            errors.push("Please enter a valid email address.");
+          }
+
+          // Check subject is chosen
+          if (subjectInput.value === "") {
+            valid = false;
+            errors.push("Please choose a subject.");
+          }
+
+          // Check message length
+          const msgLen = messageInput.value.trim().length;
+          if (msgLen < 50) {
+            valid = false;
+            errors.push("Message must be at least 50 characters.");
+          }
+          if (msgLen > 1000) {
+            valid = false;
+            errors.push("Message must be no more than 1000 characters.");
+          }
+
+          // If not valid, prevent form and alert errors
+          if (!valid) {
+            event.preventDefault();
+            alert(errors.join("\n"));
+          }
+        });
+      </script>
+    </section>
+  </main>
+  <footer>
+    &copy; Nathan Able, May 2025
+  </footer>
+</body>
+</html>

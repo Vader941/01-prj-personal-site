@@ -42,6 +42,16 @@ header h1 {
   margin: 0.5rem 0;
 }
 
+/* Style for the catchy hook under the main heading */
+.hero-hook {
+  font-family: 'Audiowide', cursive;
+  font-size: 1.4rem; /* Increased proportionally to the mini-propup */
+  color: #00ffe7;
+  margin-top: 0.5rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
 /* Navigation */
 nav {
   display: flex;
@@ -214,7 +224,14 @@ h2 {
 }
 
 .bio-text {
-  flex: 1; /* Take up remaining space */
+  max-width: 600px;      /* Limit the width for better readability */
+  margin: 0 auto;        /* Center the section horizontally */
+  padding: 1rem;         /* Add some space inside the box */
+  background: #232946;   /* Optional: subtle background for contrast */
+  border-radius: 10px;   /* Rounded corners */
+  color: #e0e6ed;        /* Light text for readability */
+  font-size: 1.08rem;    /* Slightly larger text for beginners */
+  box-shadow: 0 2px 8px rgba(162, 89, 247, 0.08); /* Soft shadow */
 }
 
 /* Stack image above text on small screens */
@@ -264,6 +281,93 @@ h2 {
   }
 }
 
+/* Contact Section Styles */
+.contact-main {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 60vh;
+}
+
+.contact-info {
+  background: #232946;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(162, 89, 247, 0.08);
+  padding: 2rem 2.5rem;
+  margin-top: 2rem;
+  font-size: 1.2rem;
+  color: #e0e6ed;
+}
+
+.contact-info a {
+  color: #00ffe7;
+  text-decoration: underline;
+  word-break: break-all;
+}
+
+.contact-info a:visited {
+  color: #e94560;
+}
+
+/* Contact Form Styling */
+.contact-form {
+  max-width: 420px;
+  margin: 2rem auto;
+  padding: 2rem 2rem 1.5rem 2rem;
+  background: #232946;
+  border-radius: 14px;
+  box-shadow: 0 2px 12px rgba(162, 89, 247, 0.10);
+  font-size: 1.15rem;
+  color: #e0e6ed;
+  text-align: left;
+}
+
+.contact-form label {
+  font-weight: bold;
+  color: #00ffe7;
+}
+
+.contact-form input,
+.contact-form select,
+.contact-form textarea {
+  width: 100%;
+  margin-top: 0.3rem;
+  margin-bottom: 1rem;
+  padding: 0.7rem;
+  border-radius: 8px;
+  border: 1px solid #39393b;
+  background: #18181b;
+  color: #e0e6ed;
+  font-size: 1rem;
+  box-sizing: border-box;
+}
+
+.contact-form textarea {
+  resize: vertical;
+}
+
+.contact-btn {
+  background: #00ffe7;
+  color: #232946;
+  border: none;
+  border-radius: 8px;
+  padding: 0.8rem 2.2rem;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0,255,231,0.10);
+  transition: background 0.2s, color 0.2s;
+  margin-top: 0.5rem;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.contact-btn:hover {
+  background: #e94560;
+  color: #fff;
+}
+
 /* Footer styles */
 footer {
   text-align: center;
@@ -273,4 +377,33 @@ footer {
   margin-top: 2rem;
   background: none;
   border-top: 1px solid #39393b;
+}
+
+/* Add to your style.css file */
+
+/* Mini pro-pup section style */
+.mini-propup {
+  font-family: 'Rubik', Arial, sans-serif; /* Use Rubik font */
+  background: #232946; /* Soft background for contrast */
+  color: #e0e6ed;      /* Light text for readability */
+  padding: 1rem 1.5rem;
+  margin: 1.5rem auto 1.5rem auto;
+  border-radius: 10px;
+  max-width: 800px;
+  font-size: 1.22rem; /* Increased font size for better readability */
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(162, 89, 247, 0.08);
+}
+
+/* Simple row for icons under the mini-propup */
+.icon-row {
+  text-align: center; /* Center the icons */
+  margin: 1.2rem 0;
+}
+
+.about-icon {
+  width: 64px;      /* Set all icons to the same width */
+  height: 64px;     /* Set all icons to the same height */
+  margin: 0 12px;   /* Add space between icons */
+  vertical-align: middle;
 }
