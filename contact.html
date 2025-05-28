@@ -6,17 +6,15 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header>
+  <!-- Header with your name, stays at the top when scrolling -->
+  <header class="sticky-header">
     <h1>Contact Nathan</h1>
   </header>
-  <!-- Navigation with Home and Bio links -->
-  <nav>
-    <!-- Home button goes to the main page -->
+  <!-- Navigation bar, stays below the header when scrolling -->
+  <nav class="sticky-nav">
     <a href="index.html">Home</a>
-    <!-- Bio button goes to the bio page -->
     <a href="bio.html">Bio</a>
     <a href="skills.html">Skills & Current Projects</a>
-    <!-- Contact button is active on this page -->
     <a href="contact.html" class="active">Contact</a>
   </nav>
   <main class="contact-main">
@@ -34,7 +32,8 @@
         </div>
       </div>
       <!-- Contact Form -->
-      <form id="contactForm" action="mailto:nable941@gmail.com" method="POST" enctype="text/plain" class="contact-form">
+      <!-- This form uses Formspree to send emails securely -->
+      <form id="contactForm" action="https://formspree.io/f/xdkgqdeg" method="POST" class="contact-form">
         <!-- Name input -->
         <label for="name">Your Name:</label><br>
         <input type="text" id="name" name="name" required><br><br>

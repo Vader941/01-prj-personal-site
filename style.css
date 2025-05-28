@@ -407,3 +407,27 @@ footer {
   margin: 0 12px;   /* Add space between icons */
   vertical-align: middle;
 }
+
+/* Make header stay at the top */
+.sticky-header {
+  position: sticky;
+  top: 0;
+  background: #232946;
+  z-index: 100;
+  padding-top: 1rem;
+}
+
+/* Make nav stay just below the header */
+.sticky-nav {
+  position: sticky;
+  top: 60px; /* Adjust if your header is taller/shorter */
+  background: #121629;
+  z-index: 99;
+  padding-bottom: 0.5rem;
+}
+
+/* Add a little shadow for visibility */
+.sticky-header,
+.sticky-nav {
+  box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+}
