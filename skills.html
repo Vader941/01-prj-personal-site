@@ -2,21 +2,34 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <!-- Make the site mobile friendly -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Skills & Current Projects - Nathan Able</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!-- Header with your name, stays at the top when scrolling -->
-  <header class="sticky-header">
+  <!-- Header with your name -->
+  <header>
     <h1>Skills & Current Projects</h1>
   </header>
 
-  <!-- Navigation bar, stays below the header when scrolling -->
-  <nav class="sticky-nav">
-    <a href="index.html">Home</a>
-    <a href="bio.html">Bio</a>
-    <a href="skills.html" class="active">Skills & Current Projects</a>
-    <a href="contact.html">Contact</a>
+  <!-- Navigation bar -->
+  <nav>
+    <!-- Hamburger menu checkbox for mobile -->
+    <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-label="Open navigation menu">
+    <!-- Hamburger icon (three bars) -->
+    <label for="nav-toggle" class="nav-toggle-label" tabindex="0" aria-label="Toggle navigation menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </label>
+    <!-- Navigation links -->
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="bio.html">Bio</a>
+      <a href="skills.html" class="active">Skills & Current Projects</a>
+      <a href="contact.html">Contact</a>
+    </div>
   </nav>
 
   <main>
@@ -27,31 +40,31 @@
       <ul class="skills">
         <!-- HTML & CSS skill as an image -->
         <li>
-          <img src="img/HTML-CSS.png" alt="HTML & CSS Logo" class="skill-icon">
+          <img src="img/HTML-CSS.png" alt="HTML and CSS logos" class="skill-icon">
         </li>
         <!-- Python skill as an image -->
         <li>
-          <img src="img/python.png" alt="Python Logo" class="skill-icon">
+          <img src="img/python.png" alt="Python programming language logo" class="skill-icon">
         </li>
         <!-- JS/Node.js skill as an image -->
         <li>
-          <img src="img/JSNode.png" alt="JavaScript and Node.js Logo" class="skill-icon">
+          <img src="img/JSNode.png" alt="JavaScript and Node.js logos" class="skill-icon">
         </li>
         <!-- Java skill as an image -->
         <li>
-          <img src="img/Java.png" alt="Java Logo" class="skill-icon">
+          <img src="img/Java.png" alt="Java programming language logo" class="skill-icon">
         </li>
         <!-- Agile skill as an image -->
         <li>
-          <img src="img/Agile.png" alt="Agile Logo" class="skill-icon">
+          <img src="img/Agile.png" alt="Agile methodology icon" class="skill-icon">
         </li>
         <!-- Git skill as an image -->
         <li>
-          <img src="img/git.png" alt="Git Logo" class="skill-icon">
+          <img src="img/git.png" alt="Git version control logo" class="skill-icon">
         </li>
         <!-- AI Tools skill as an image -->
         <li>
-          <img src="img/AI.png" alt="AI Tools Logo" class="skill-icon">
+          <img src="img/AI.png" alt="AI tools logo" class="skill-icon">
         </li>
       </ul>
     </section>
@@ -65,7 +78,7 @@
         <div class="project-card">
           <!-- The image is now a link to your website project -->
           <a href="https://vader941.github.io/01-pet-fostering-cta/" target="_blank">
-            <img src="img/TN-Web.jpg" alt="Website Thumbnail" class="project-thumb">
+            <img src="img/TN-Web.jpg" alt="Screenshot of pet fostering website project" class="project-thumb">
           </a>
           <div>
             <strong>Website Design</strong>
@@ -74,8 +87,10 @@
         </div>
         <!-- Project 2: Oregon Trail game with thumbnail -->
         <div class="project-card">
-          <!-- Thumbnail for Oregon Trail project -->
-          <img src="img/Oregon.png" alt="Oregon Trail Game Thumbnail" class="project-thumb">
+          <!-- Make the image a link to the GitHub project -->
+          <a href="https://github.com/Vader941/prj_Oregon_Trail_fan_build" target="_blank">
+            <img src="img/Oregon.png" alt="Screenshot of Oregon Trail Python game" class="project-thumb">
+          </a>
           <div>
             <strong>Oregon Trail Game (Python)</strong>
             <p>Creating a text-based replica of The Oregon Trail game using Python.</p>
@@ -85,7 +100,7 @@
         <div class="project-card">
           <!-- The image is now a link to the IBM Sustainability project -->
           <a href="https://vader941.github.io/02-prj-intel-sustainability/" target="_blank">
-            <img src="img/IBM-Web.jpg" alt="IBM Sustainability Project Thumbnail" class="project-thumb">
+            <img src="img/IBM-Web.jpg" alt="Screenshot of IBM Sustainability project webpage" class="project-thumb">
           </a>
           <div>
             <strong>IBM Sustainability</strong>

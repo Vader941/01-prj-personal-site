@@ -2,20 +2,33 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <!-- Make the site mobile friendly -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contact - Nathan Able</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!-- Header with your name, stays at the top when scrolling -->
-  <header class="sticky-header">
+  <!-- Header with your name -->
+  <header>
     <h1>Contact Nathan</h1>
   </header>
-  <!-- Navigation bar, stays below the header when scrolling -->
-  <nav class="sticky-nav">
-    <a href="index.html">Home</a>
-    <a href="bio.html">Bio</a>
-    <a href="skills.html">Skills & Current Projects</a>
-    <a href="contact.html" class="active">Contact</a>
+  <!-- Navigation bar -->
+  <nav>
+    <!-- Hamburger menu checkbox for mobile -->
+    <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-label="Open navigation menu">
+    <!-- Hamburger icon (three bars) -->
+    <label for="nav-toggle" class="nav-toggle-label" tabindex="0" aria-label="Toggle navigation menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </label>
+    <!-- Navigation links -->
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="bio.html">Bio</a>
+      <a href="skills.html">Skills & Current Projects</a>
+      <a href="contact.html" class="active">Contact</a>
+    </div>
   </nav>
   <main class="contact-main">
     <section id="contact">

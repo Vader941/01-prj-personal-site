@@ -408,26 +408,119 @@ footer {
   vertical-align: middle;
 }
 
-/* Make header stay at the top */
-.sticky-header {
-  position: sticky;
-  top: 0;
-  background: #232946;
-  z-index: 100;
-  padding-top: 1rem;
+
+
+/* Hamburger menu styles for mobile navigation */
+/* Hide the checkbox and hamburger by default on desktop */
+.nav-toggle,
+.nav-toggle-label {
+  display: none;
 }
 
-/* Make nav stay just below the header */
-.sticky-nav {
-  position: sticky;
-  top: 60px; /* Adjust if your header is taller/shorter */
-  background: #121629;
-  z-index: 99;
-  padding-bottom: 0.5rem;
+/* Show hamburger menu on small screens */
+@media (max-width: 700px) {
+  nav {
+    /* Stack nav vertically on mobile */
+    flex-direction: column;
+    align-items: flex-start;
+    position: relative;
+    gap: 0;
+    padding: 0.5rem 0;
+  }
+  /* Show hamburger icon */
+  .nav-toggle {
+    display: block;
+    position: absolute;
+    left: 1rem;
+    top: 1rem;
+    width: 40px;
+    height: 40px;
+    opacity: 0; /* Hide the checkbox itself */
+    z-index: 101;
+  }
+  .nav-toggle-label {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    margin-left: 1rem;
+    z-index: 102;
+  }
+  .nav-toggle-label span {
+    display: block;
+    height: 4px;
+    width: 28px;
+    background: #a259f7;
+    margin: 5px 0;
+    border-radius: 2px;
+    transition: 0.3s;
+  }
+  /* Hide nav links by default on mobile */
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background: #232946;
+    margin-top: 2.5rem;
+    border-radius: 0 0 12px 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+  }
+  /* Show nav links when hamburger is checked */
+  .nav-toggle:checked + .nav-toggle-label + .nav-links {
+    display: flex;
+  }
+  .nav-links a {
+    padding: 1rem 2rem;
+    border-bottom: 1px solid #39393b;
+    color: #a259f7;
+    text-align: left;
+    width: 100%;
+  }
+  .nav-links a:last-child {
+    border-bottom: none;
+  }
+  /* Hide the default nav links on mobile */
+  nav > a {
+    display: none;
+  }
 }
 
-/* Add a little shadow for visibility */
-.sticky-header,
-.sticky-nav {
-  box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+/* Make images responsive */
+img,
+.about-icon,
+.bio-photo,
+.skill-icon,
+.project-thumb {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Make text scale on small screens */
+body,
+.bio-text,
+.mini-propup,
+contact-info,
+.contact-form {
+  font-size: 1rem;
+}
+
+@media (max-width: 700px) {
+  body,
+  .bio-text,
+  .mini-propup,
+  .contact-info,
+  .contact-form {
+    font-size: 1.05rem;
+  }
+  header h1 {
+    font-size: 1.5rem;
+  }
+  .hero-hook {
+    font-size: 1.1rem;
+  }
+  h2 {
+    font-size: 1.2rem;
+  }
 }

@@ -2,6 +2,8 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <!-- Make the site mobile friendly -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>My Personal Portfolio</title>
   <link rel="stylesheet" href="style.css">
   <!-- Add Google Fonts Audiowide for the hook -->
@@ -11,7 +13,7 @@
 </head>
 <body>
   <!-- Header section with your name -->
-  <header class="sticky-header">
+  <header>
     <h1>Nathan Able - A Full Stack Developer</h1>
     <!-- Catchy hook below the main heading -->
     <p class="hero-hook">
@@ -19,11 +21,23 @@
     </p>
   </header>
 
-  <!-- Navigation links to each section -->
-  <nav class="sticky-nav">
-    <a href="bio.html">Bio</a>
-    <a href="skills.html">Skills & Current Projects</a>
-    <a href="contact.html">Contact</a>
+  <!-- Navigation bar with hamburger menu for mobile -->
+  <nav>
+    <!-- Hamburger menu checkbox for mobile -->
+    <!-- When checked, the menu links will show -->
+    <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-label="Open navigation menu">
+    <!-- Hamburger icon (three bars) -->
+    <label for="nav-toggle" class="nav-toggle-label" tabindex="0" aria-label="Toggle navigation menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </label>
+    <!-- Navigation links -->
+    <div class="nav-links">
+      <a href="bio.html">Bio</a>
+      <a href="skills.html">Skills & Current Projects</a>
+      <a href="contact.html">Contact</a>
+    </div>
   </nav>
 
   <!-- Mini pro-pup section below the nav -->
@@ -34,11 +48,11 @@
   <!-- Icons section below the mini pro-pup -->
   <div class="icon-row">
     <!-- Autism icon -->
-    <img src="img/autism.png" alt="Autism Awareness Icon" class="about-icon">
+    <img src="img/autism.png" alt="Puzzle piece ribbon for Autism Awareness" class="about-icon">
     <!-- Full Stack icon -->
-    <img src="img/fullstack.png" alt="Full Stack Developer Icon" class="about-icon">
+    <img src="img/fullstack.png" alt="Icon representing Full Stack Developer" class="about-icon">
     <!-- Accessibility icon -->
-    <img src="img/accessability.png" alt="Accessibility Icon" class="about-icon">
+    <img src="img/accessability.png" alt="Universal Accessibility Icon" class="about-icon">
   </div>
 
   <!-- Main content layout (no Skills or Current Projects section) -->
