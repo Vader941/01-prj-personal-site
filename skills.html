@@ -2,36 +2,15 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <!-- Make the site mobile friendly -->
+  <!-- The viewport tag below makes the site mobile friendly and responsive -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Skills & Current Projects - Nathan Able</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <!-- Header with your name -->
-  <header>
-    <h1>Skills & Current Projects</h1>
-  </header>
+<div id="header-nav-placeholder"></div>
 
-  <!-- Navigation bar -->
-  <nav>
-    <!-- Hamburger menu checkbox for mobile -->
-    <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-label="Open navigation menu">
-    <!-- Hamburger icon (three bars) -->
-    <label for="nav-toggle" class="nav-toggle-label" tabindex="0" aria-label="Toggle navigation menu">
-      <span></span>
-      <span></span>
-      <span></span>
-    </label>
-    <!-- Navigation links -->
-    <div class="nav-links">
-      <a href="index.html">Home</a>
-      <a href="bio.html">Bio</a>
-      <a href="skills.html" class="active">Skills & Current Projects</a>
-      <a href="contact.html">Contact</a>
-    </div>
-  </nav>
-
+  <!-- Main content area is also responsive thanks to CSS media queries -->
   <main>
     <!-- Skills Section -->
     <section id="skills">
@@ -99,12 +78,12 @@
         <!-- Project 3: IBM Sustainability -->
         <div class="project-card">
           <!-- The image is now a link to the IBM Sustainability project -->
-          <a href="https://vader941.github.io/02-prj-intel-sustainability/" target="_blank">
-            <img src="img/IBM-Web.jpg" alt="Screenshot of IBM Sustainability project webpage" class="project-thumb">
+          <a href="https://vader941.github.io/03-prj-intel-localization/" target="_blank">
+            <img src="img/Intel-Web.jpg" alt="Screenshot of IBM Sustainability project webpage" class="project-thumb">
           </a>
           <div>
-            <strong>IBM Sustainability</strong>
-            <p>An interactive webpage that presents Intel's sustainability goals in a timeline format.</p>
+            <strong>Intel Sustainability</strong>
+            <p>An interactive webpage that presents Intel's sustainability goals in a timeline format. Formated for inclusive useage, including dynamic RTL language detection.</p>
           </div>
         </div>
       </div>
@@ -115,5 +94,6 @@
   <footer>
     &copy; Nathan Able, May 2025
   </footer>
+  <script src="/js/includes.js"></script>
 </body>
 </html>
