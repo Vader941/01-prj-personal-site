@@ -11,5 +11,5 @@ function includeHTML(id, url) {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
-  includeHTML("header-nav-placeholder", "/partials/header-nav.html");
+  includeHTML("header-nav-placeholder", "./partials/header-nav.html");
 });
