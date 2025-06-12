@@ -181,12 +181,13 @@ h2 {
   color: #e0e6ed;
 }
 
-/* Projects section uses flex to show cards side by side */
+/* Projects section uses flex to show cards in a 2x2 grid */
 .projects-flex {
   display: flex;              /* Place projects side by side */
   gap: 2rem;                  /* Space between projects */
-  flex-wrap: wrap;            /* Wrap on small screens */
+  flex-wrap: wrap;            /* Wrap to create rows */
   margin-top: 1rem;
+  justify-content: center;    /* Center the cards */
 }
 
 .project-card {
@@ -194,20 +195,35 @@ h2 {
   border-radius: 12px;
   box-shadow: 0 2px 8px rgba(162,89,247,0.07);
   padding: 1rem;
-  flex: 1 1 260px;            /* Responsive width */
-  min-width: 220px;
+  flex: 0 1 calc(50% - 2rem);  /* Take up approximately half the container width minus gap */
+  min-width: 280px;           /* Ensure minimum width for readability */
+  max-width: 500px;           /* Limit maximum width */
   display: flex;
-  align-items: flex-start;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
   gap: 1rem;
 }
 
+/* Make project thumbnails larger and more visible */
 .project-thumb {
-  width: 80px;                /* Thumbnail size */
-  height: 80px;
+  width: 180px;                /* Increased size from 80px */
+  height: 180px;               /* Increased size from 80px */
   object-fit: cover;
-  border-radius: 8px;
-  box-shadow: 0 1px 4px rgba(0,0,0,0.10);
+  border-radius: 12px;         /* Slightly larger radius */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.15); /* Stronger shadow for emphasis */
   border: none;
+  transition: transform 0.2s; /* Add a subtle hover effect */
+}
+
+/* Add hover effect to thumbnails */
+.project-card a:hover .project-thumb {
+  transform: scale(1.05);    /* Slightly enlarge on hover */
+}
+
+/* Adjust text portion of project cards */
+.project-card div {
+  width: 100%;
 }
 
 /* Bio section layout */
@@ -279,8 +295,14 @@ h2 {
     gap: 1rem;
   }
   .project-card {
-    flex-direction: row;
+    flex-direction: column;    /* Keep thumbnails above text on mobile */
+    align-items: center;
     min-width: unset;
+  }
+
+  .project-thumb {
+    width: 160px;             /* Slightly smaller on mobile but still clearly visible */
+    height: 160px;
   }
 }
 
@@ -526,4 +548,107 @@ contact-info,
   h2 {
     font-size: 1.2rem;
   }
+}
+
+.accessibility-highlight {
+  background-color: #003366;
+  color: white;
+  padding: 4rem 2rem;
+  font-family: 'Rubik', sans-serif;
+  border-top: 4px solid #FFD700;
+}
+
+.highlight-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.highlight-image {
+  max-width: 240px;
+  height: auto;
+}
+
+.highlight-text h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.highlight-text h2 em {
+  color: #FFD700;
+  font-style: normal;
+}
+
+.highlight-text p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  margin: 0 auto;
+  max-width: 700px;
+}
+
+.highlight-text .secondary {
+  margin-top: 2rem;
+  font-weight: 600;
+  font-size: 1.3rem;
+}
+
+@media (min-width: 768px) {
+  .highlight-container {
+    flex-direction: row;
+    text-align: left;
+  }
+
+  .highlight-text {
+    flex: 1;
+    padding-left: 2rem;
+  }
+}
+
+/* Accessibility Carousel Styles */
+.carousel-container {
+  position: relative;
+  width: 240px;
+  height: 300px; /* Increased height to accommodate caption */
+  margin: 0 auto;
+  background-color: #1a1a2e;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.carousel-image {
+  width: 240px;
+  height: 240px;
+  object-fit: cover;
+  display: block;
+  transition: opacity 0.5s ease;
+}
+
+.carousel-caption {
+  background-color: #003366;
+  color: white;
+  padding: 10px;
+  text-align: center;
+  font-weight: 600;
+  font-size: 0.9rem;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Screen reader only class (visually hidden but accessible to screen readers) */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
 }

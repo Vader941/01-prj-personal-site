@@ -14,10 +14,22 @@
 <body>
 <div id="header-nav-placeholder"></div>
 
-  <!-- Mini pro-pup section below the nav -->
-  <section class="mini-propup">
-    Formerly a logistics software innovator at Amazon, I spent years developing tools that improved efficiency and accuracy at scale. But it was my journey as a parent of an autistic child that shifted my focus. Now, I’m channeling that same development skill set into building accessible web tools and educational games—projects that are not only technically sound but designed with empathy, clarity, and real-world impact in mind. My goal is to create technology that empowers and includes, especially for those who experience the world differently.
-  </section>
+<!-- Mission Spotlight Section -->
+<section class="accessibility-highlight">
+  <div class="highlight-container">
+    <!-- Replace the carousel div with a proper figure element -->
+    <figure id="accessibility-carousel" class="carousel-container" aria-labelledby="carousel-heading">
+      <!-- Screen reader announcement area (visually hidden) -->
+      <div id="carousel-announcement" class="sr-only" aria-live="polite"></div>
+    </figure>
+    
+    <div class="highlight-text">
+      <h2 id="carousel-heading">Technology should include <em>everyone</em>.</h2>
+      <p>Too many tools are built for the average user — but there's no such thing. I'm committed to creating digital experiences that empower people of all abilities, learning styles, and backgrounds.</p>
+      <p class="secondary">Accessibility isn't a feature. It's the starting point.</p>
+    </div>
+  </div>
+</section>
 
   <!-- Icons section below the mini pro-pup -->
   <div class="icon-row">
@@ -36,6 +48,8 @@
   <footer>
     &copy; Nathan Able, May 2025
   </footer>
-   <script src="./js/includes.js"></script>
+  <script src="./js/includes.js"></script>
+  <!-- Add the carousel script -->
+  <script src="./js/carousel.js"></script>
 </body>
 </html>
