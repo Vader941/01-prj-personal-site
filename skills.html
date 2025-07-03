@@ -12,45 +12,92 @@
 
   <!-- Main content area is also responsive thanks to CSS media queries -->
   <main>
-    <!-- Skills Section -->
-    <section id="skills">
-      <h2>Skills</h2>
-      <!-- List of your skills -->
-      <ul class="skills">
-        <!-- HTML & CSS skill as an image -->
-        <li>
-          <img src="./img/HTML-CSS.png" alt="HTML and CSS logos" class="skill-icon">
-        </li>
-        <!-- Python skill as an image -->
-        <li>
-          <img src="./img/python.png" alt="Python programming language logo" class="skill-icon">
-        </li>
-        <!-- JS/Node.js skill as an image -->
-        <li>
-          <img src="./img/JSNode.png" alt="JavaScript and Node.js logos" class="skill-icon">
-        </li>
-        <!-- Java skill as an image -->
-        <li>
-          <img src="./img/Java.png" alt="Java programming language logo" class="skill-icon">
-        </li>
-        <!-- Agile skill as an image -->
-        <li>
-          <img src="./img/Agile.png" alt="Agile methodology icon" class="skill-icon">
-        </li>
-        <!-- Git skill as an image -->
-        <li>
-          <img src="./img/git.png" alt="Git version control logo" class="skill-icon">
-        </li>
-        <!-- AI Tools skill as an image -->
-        <li>
-          <img src="./img/AI.png" alt="AI tools logo" class="skill-icon">
-        </li>
-      </ul>
-    </section>
+    <!-- Two-column layout for GitHub Activity and Skills on desktop -->
+    <div class="top-sections-container">
+      <!-- GitHub Activity Section - New component -->
+      <section id="github-activity">
+        <h2>Currently Working On... <img src="./img/github-logo.png" alt="GitHub logo" class="github-header-logo"> GitHub</h2>
+        <p class="github-personal-note">Here's a peek at what I've been working on recently via GitHub. This feed updates automatically based on my public commits — check back often!</p>
+        <div class="github-activity-container">
+          <!-- GitHub commit cards - These would be dynamic in a real implementation -->
+          <div class="commit-card">
+            <div class="commit-header">
+              <span class="commit-repo">charity-water-game</span>
+              <span class="commit-date">2 days ago</span>
+            </div>
+            <p class="commit-message">Added responsive layout for game controls on mobile devices</p>
+            <div class="commit-footer">
+              <span class="commit-hash">#8a72f3d</span>
+              <span class="commit-files">5 files changed</span>
+            </div>
+          </div>
+          
+          <div class="commit-card">
+            <div class="commit-header">
+              <span class="commit-repo">personal-portfolio</span>
+              <span class="commit-date">4 days ago</span>
+            </div>
+            <p class="commit-message">Improved accessibility for screen readers in navigation</p>
+            <div class="commit-footer">
+              <span class="commit-hash">#3e9d21c</span>
+              <span class="commit-files">2 files changed</span>
+            </div>
+          </div>
+          
+          <div class="commit-card">
+            <div class="commit-header">
+              <span class="commit-repo">nasa-space-explorer</span>
+              <span class="commit-date">1 week ago</span>
+            </div>
+            <p class="commit-message">Fixed API cache refresh issue on date change</p>
+            <div class="commit-footer">
+              <span class="commit-hash">#c47b290</span>
+              <span class="commit-files">1 file changed</span>
+            </div>
+          </div>
+        </div>
+      </section>
 
-    <!-- Current Projects Section -->
+      <!-- Skills Section -->
+      <section id="skills">
+        <h2>Skills</h2>
+        <!-- List of your skills -->
+        <ul class="skills">
+          <!-- HTML & CSS skill as an image -->
+          <li>
+            <img src="./img/HTML-CSS.png" alt="HTML and CSS logos" class="skill-icon">
+          </li>
+          <!-- Python skill as an image -->
+          <li>
+            <img src="./img/python.png" alt="Python programming language logo" class="skill-icon">
+          </li>
+          <!-- JS/Node.js skill as an image -->
+          <li>
+            <img src="./img/JSNode.png" alt="JavaScript and Node.js logos" class="skill-icon">
+          </li>
+          <!-- Java skill as an image -->
+          <li>
+            <img src="./img/Java.png" alt="Java programming language logo" class="skill-icon">
+          </li>
+          <!-- Agile skill as an image -->
+          <li>
+            <img src="./img/Agile.png" alt="Agile methodology icon" class="skill-icon">
+          </li>
+          <!-- Git skill as an image -->
+          <li>
+            <img src="./img/git.png" alt="Git version control logo" class="skill-icon">
+          </li>
+          <!-- AI Tools skill as an image -->
+          <li>
+            <img src="./img/AI.png" alt="AI tools logo" class="skill-icon">
+          </li>
+        </ul>
+      </section>
+    </div>
+
+    <!-- Current Projects Section - renamed to Project Highlights -->
     <section id="projects">
-      <h2>Current Projects</h2>
+      <h2>Project Highlights</h2>
       <!-- Projects container for side-by-side layout -->
       <div class="projects-flex">
         <!-- Project 1: Website with thumbnail -->
@@ -89,7 +136,7 @@
           </div>
         </div>
         
-        <!-- NEW Project 4: Charity Water Game Prototype -->
+        <!-- Project 4: Charity Water Game Prototype -->
         <div class="project-card">
           <!-- Link to the charity: water game prototype -->
           <a href="https://vader941.github.io/prj_charity_water_game_prototype/" target="_blank">
@@ -98,6 +145,18 @@
           <div>
             <strong>Charity: Water Interactive Game</strong>
             <p>💧 A web-based game built to raise awareness about global water access challenges. This fully playable prototype highlights basic water distribution concepts through pipe-based puzzle mechanics, encouraging students to think critically while staying true to charity: water's branding and mission. Designed with accessibility, responsiveness, and educational value in mind.</p>
+          </div>
+        </div>
+        
+        <!-- NEW Project 5: NASA Space Explorer -->
+        <div class="project-card">
+          <!-- Link to the NASA Space Explorer project -->
+          <a href="https://vader941.github.io/07-nasa-space-explorer/" target="_blank">
+            <img src="./img/nasa.jpg" alt="Screenshot of NASA Space Explorer web app" class="project-thumb">
+          </a>
+          <div>
+            <strong>NASA Space Explorer</strong>
+            <p>A responsive web app that fetches real-time images and videos from NASA's Astronomy Picture of the Day (APOD) API. Features include dynamic media galleries, modal views, randomized space facts, and official NASA branding. Built using HTML, CSS, and JavaScript with a focus on API integration, responsive design, and user experience.</p>
           </div>
         </div>
       </div>
@@ -109,5 +168,7 @@
     &copy; Nathan Able, May 2025
   </footer>
   <script src="./js/includes.js"></script>
+  <!-- Load GitHub activity script to fetch real commits -->
+  <script src="./js/github-activity.js"></script>
 </body>
 </html>
