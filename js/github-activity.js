@@ -359,9 +359,26 @@ async function fetchGitHubActivity() {
   } catch (error) {
     // Handle any errors that occurred during the fetch
     console.error('Error fetching GitHub activity:', error);
-    displayError('Unable to load GitHub activity. Please check your internet connection.');
+    
+    // Check if it's a CORS error (common on GitHub Pages)
+    if (error.message.includes('CORS') || error.message.includes('fetch')) {
+      displayError('GitHub API temporarily unavailable. This is common on GitHub Pages due to CORS restrictions. The live version will show real commit data when accessed directly.');
+    } else {
+      displayError('Unable to load GitHub activity. Please check your internet connection or try refreshing the page.');
+    }
   }
 }
 
 // Wait for the page to fully load, then fetch GitHub activity
-document.addEventListener('DOMContentLoaded', fetchGitHubActivity);
+document.addEventListener('DOMContentLoaded', function() {
+  console.log('DOM loaded, starting GitHub activity fetch...');
+  fetchGitHubActivity();
+});
+
+// Also try again after a delay in case of timing issues
+setTimeout(function() {
+  if (document.querySelector('.github-activity-container .commit-card .commit-repo').textContent === 'Loading...') {
+    console.log('Retrying GitHub activity fetch after delay...');
+    fetchGitHubActivity();
+  }
+}, 2000);
