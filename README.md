@@ -1,85 +1,94 @@
-# Personal Portfolio Website
+# Personal Developer Portfolio
 
-![GitHub repo size](https://img.shields.io/github/repo-size/Vader941/01-prj-personal-site)
-![GitHub last commit](https://img.shields.io/github/last-commit/Vader941/01-prj-personal-site)
-![Website](https://img.shields.io/website?url=https%3A%2F%2Fvader941.github.io%2F01-prj-personal-site)
+A professional portfolio website showcasing my development projects, technical skills, and experience. Built with modern web standards and designed for accessibility, this site serves as a comprehensive overview of my capabilities for potential employers, collaborators, and clients. The portfolio demonstrates proficiency in frontend development while maintaining clean, semantic code and responsive design principles.
 
-## Overview
+**Live Demo:** [vader941.github.io/01-prj-personal-site](https://vader941.github.io/01-prj-personal-site)
 
-This is the source repository for my personal portfolio website, designed to highlight my skills, projects, and journey as a developer. Built with semantic HTML, responsive CSS, and clean JavaScript, the site functions as both a résumé and a showcase of the work and values that define me.
+## Features
 
-🔗 **Live Site:** [vader941.github.io/01-prj-personal-site](https://vader941.github.io/01-prj-personal-site)
+- **Project Gallery**: Interactive showcase of development projects with live demos and repository links
+- **Dynamic GitHub Activity**: Real-time feed of recent commits using the GitHub API
+- **Skills Section**: Visual representation of technical competencies and tools
+- **Responsive Design**: Optimized for desktop, tablet, and mobile viewing
+- **Accessibility-First**: Screen reader compatibility, semantic HTML, and keyboard navigation support
+- **Contact Integration**: Professional contact form and social media links
+- **Resume Access**: Downloadable PDF resume for offline review
 
----
+## Technologies Used
 
-## 🔧 Tech Stack
+- **HTML5**: Semantic markup with accessibility best practices
+- **CSS3**: Custom styling with flexbox layouts and media queries for responsiveness  
+- **JavaScript**: Vanilla JS for interactive features and API integration
+- **GitHub API**: Real-time commit activity display
+- **GitHub Pages**: Static site hosting and deployment
+- **Git**: Version control and collaborative development workflow
 
-- **HTML5** — semantic, accessible markup
-- **CSS3** — custom styling and layout with responsiveness in mind
-- **JavaScript (vanilla)** — for interactivity and behavior
-- **GitHub Pages** — for hosting and version control
-- **VS Code & GitHub Codespaces** — for development and collaboration
+## Installation Instructions
 
----
+To run this portfolio locally for development or review:
 
-## 📁 Features
+```bash
+# Clone the repository
+git clone https://github.com/Vader941/01-prj-personal-site.git
 
-- **Intro Section**: A quick personal snapshot and professional mission
-- **Projects Gallery**: Interactive cards linking to my most important public projects and prototypes
-- **Skills & Tools**: Icons and short descriptions of the languages, frameworks, and tools I use
-- **Resume Link**: A downloadable version of my up-to-date résumé
-- **Contact Info**: Social and email links for professional inquiries
+# Navigate to project directory
+cd 01-prj-personal-site
 
----
+# Open in your preferred web server or IDE
+# For VS Code with Live Server extension:
+code .
+# Then right-click index.html and select "Open with Live Server"
+```
 
-## 💡 Goals
+No build process or dependencies required - this is a static HTML/CSS/JS site.
 
-This portfolio was designed with several objectives in mind:
+## Accessibility Considerations
 
-- Act as a **central hub** for all professional materials and project links.
-- Reflect my **developer identity** with a clean, minimal UI and accessibility considerations.
-- Demonstrate ability to work with **web fundamentals** without relying on frameworks.
-- Provide a place where I can **continue to iterate and expand** as I grow in my career.
+This portfolio prioritizes inclusive design and usability:
 
----
+- **Semantic HTML structure** for screen reader compatibility
+- **Alt text** provided for all images and icons
+- **Keyboard navigation** support throughout the interface
+- **Color contrast** meets WCAG 2.1 AA standards
+- **RTL language support** with dynamic text direction detection
+- **Responsive typography** that scales appropriately across devices
+- **Focus indicators** for interactive elements
 
-## 🚧 Work in Progress
+## Project Structure
 
-- [ ] Mobile navigation improvements
-- [ ] Blog or updates section (future)
-- [ ] Dark mode toggle
-- [ ] Additional project write-ups
+```
+├── index.html          # Homepage with introduction and overview
+├── skills.html         # Skills showcase and GitHub activity feed
+├── bio.html           # Detailed personal and professional background
+├── contact.html       # Contact form and professional links
+├── resume.html        # Resume display page
+├── css/
+│   └── style.css      # Main stylesheet with responsive design
+├── js/
+│   ├── github-activity.js  # GitHub API integration
+│   └── includes.js    # Shared navigation and utility functions
+├── img/               # Images, icons, and project screenshots
+└── assets/            # Downloadable files (resume PDF)
+```
 
----
+## Live Demo
 
-## 📸 Screenshots
+View the complete portfolio at: [vader941.github.io/01-prj-personal-site](https://vader941.github.io/01-prj-personal-site)
 
-> _Screenshots coming soon — or view the live demo linked above for the most up-to-date version._
+The site includes:
+- Interactive project demonstrations
+- Real-time GitHub commit activity
+- Responsive design across all device sizes
+- Professional contact options
 
----
+## Contact
 
-## 🧠 Lessons Learned
+**Nathan Able**  
+Developer focused on accessible, user-centered web applications
 
-- Strengthened understanding of responsive layouts without frameworks
-- Gained deeper appreciation for design constraints and branding consistency
-- Practiced managing a site as a product — balancing personal expression with professional tone
+- **Portfolio**: [vader941.github.io/01-prj-personal-site](https://vader941.github.io/01-prj-personal-site)
+- **LinkedIn**: [linkedin.com/in/nathan-able](https://www.linkedin.com/in/nathan-able)
+- **GitHub**: [github.com/Vader941](https://github.com/Vader941)
+- **Email**: Available through the contact form on the portfolio site
 
----
-
-## 🤝 Acknowledgments
-
-- Inspiration from modern dev portfolios and open-source templates
-- Icons from [Font Awesome](https://fontawesome.com/)
-- Hosted on [GitHub Pages](https://pages.github.com/)
-
----
-
-## 📜 License
-
-This project is open source under the [MIT License](LICENSE).
-
----
-
-## 🙋‍♂️ About Me
-
-I’m Nathan — a developer passionate about making tech inclusive, practical, and empowering. You can learn more about me [here](https://vader941.github.io/01-prj-personal-site) or follow my journey on [LinkedIn](https://www.linkedin.com/in/nathan-able).
+Open to discussing development opportunities, collaboration projects, and technical consulting work.
